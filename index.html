@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameHub</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+  
+<!-- Login -->
+<div id="login-page" class="min-h-screen flex items-center justify-center">
+  <form id="login-form">
+    <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+      <legend class="fieldset-legend">Login</legend>
+
+      <label class="label" for="email">Email</label>
+      <input type="email" id="email" class="input" placeholder="Email" required />
+
+      <label class="label" for="password">Password</label>
+      <input type="password" id="password" class="input" placeholder="Password" required />
+
+      <button type="submit" class="btn btn-neutral mt-4">Login</button>
+    </fieldset>
+  </form>
+</div>
+
+  </div>
+
+ 
+<!-- Home start-->
+<div id="home-page" class="hidden">
+
+  <div class="navbar bg-base-100 shadow-sm px-4">
+    <div class="flex-1">
+      <a class="text-2xl font-bold">GameHub</a>
+    </div>
+
+    <div class="flex gap-3">
+      <button id="home-btn" class="btn btn-primary">Home</button>
+      <button id="history-btn" class="btn">History</button>
+    </div>
+
+    <div class="flex-1 flex justify-end items-center gap-4">
+      <button class="btn btn-outline">
+        $ <span id="balance">0.00</span>
+      </button>
+
+      <div class="dropdown dropdown-end">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+          <div class="w-12 rounded-full">
+            <img src="https://nextbit.top/img/SakibDp.png" alt="Profile "/>
+           
+          </div>
+        </div>
+
+       
+<ul tabindex="0" class="menu dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow">
+        <li>
+          <a id="profile-btn" class="flex justify-between items-center">
+            <span>Profile</span>
+            <span>Farhad</span>
+          </a>
+        </li>
+        <li><a id="add-money-btn">Add Money</a></li>
+        <li><a id="logout-btn">Logout</a></li>
+      </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="home-content">
+    <div class="hero min-h-[100vh]" style="background-image: url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1600&q=80');">
+      <div class="hero-overlay bg-black/50"></div>
+      <div class="hero-content text-center text-white">
+        <div class="max-w-xl">
+          <h1 class="text-5xl font-bold">GAme Zone</h1>
+          <p class="py-6">Discover your favorite games and explore the collection.</p>
+          <button id="get-started-btn" class="btn btn-primary">Get Started</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="products" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+
+      <div class="card bg-base-100 shadow-xl">
+        <figure>
+          <img src="https://cdn.wildflamestudio.com/common/web_event/hash/54f31449f5f91cf0cc223cc635cd5952jpg" alt="Free Fire" class="w-full h-64 object-cover" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Free Fire</h2>
+          <p>Explore this game and get started with your favorite experience.</p>
+          <div class="card-actions justify-between items-center">
+            <span class="badge badge-warning badge-lg">$500</span>
+            <button class="btn btn-primary shop-btn" data-price="500">
+              Shop Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-xl">
+        <figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6-lmYb7DIa-faCC0t8tDmqSD2rFAvySzWo5PZQ45FcIedJ-ktGPWGvHM&s=10" alt="Game Two" class="w-full h-64 object-cover" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">PUBG Mobile</h2>
+          <p>Explore this game and get started with your favorite experience.</p>
+          <div class="card-actions justify-between items-center">
+            <span class="badge badge-warning badge-lg">$500</span>
+            <button class="btn btn-primary shop-btn" data-price="500">
+              Shop Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-xl">
+        <figure>
+          <img src="https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/mobile/home/gamemodes/GameModes_Multiplayer.webp" alt="Game Three" class="w-full h-64 object-cover" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Call of Duty</h2>
+          <p>Explore this game and get started with your favorite experience.</p>
+          <div class="card-actions justify-between items-center">
+            <span class="badge badge-warning badge-lg">$500</span>
+            <button class="btn btn-primary shop-btn" data-price="500">
+              Shop Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-xl">
+        <figure>
+          <img src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Minecraft%20_Holiday_Game_Drop_2025_OV-PMP_1280x720.jpg" alt="Game Three" class="w-full h-64 object-cover" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Minecraft</h2>
+          <p>Explore this game and get started with your favorite experience.</p>
+          <div class="card-actions justify-between items-center">
+            <span class="badge badge-warning badge-lg">$500</span>
+           <button class="btn btn-primary shop-btn" data-price="500">
+              Shop Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-xl">
+        <figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0SC_STTXheHmKtNZq0_e8n3unC8Ngwd-bm_iH605dnZeWOYp6WWAWKyPv&s=10" alt="Game Three" class="w-full h-64 object-cover" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Fortnite</h2>
+          <p>Explore this game and get started with your favorite experience.</p>
+          <div class="card-actions justify-between items-center">
+            <span class="badge badge-warning badge-lg">$500</span>
+            <button class="btn btn-primary shop-btn" data-price="500">
+              Shop Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  <div id="history-page" class="hidden p-6 min-h-[400px]">
+    <h1 class="text-3xl font-bold mb-4">History</h1>
+    <div id="history-list" class="space-y-3">
+      <p>No transactions yet.</p>
+    </div>
+  </div>
+
+  
+
+
+
+    <!-- add money saatrt -->
+   
+    
+<div id="add-money-page" class="hidden">
+  <form id="add-money-form">
+    <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+      <legend class="fieldset-legend">Add Money</legend>
+
+      <label class="label">Select Bank</label>
+      <select id="bank-selector" class="select" required>
+        <option value="">Select Bank</option>
+        <option value="BRAC Bank">BRAC Bank</option>
+        <option value="DBBL">DBBL Bank</option>
+        <option value="City Bank">City Bank</option>
+        <option value="City Bank">Agroni Bank</option>
+      </select>
+
+      <label class="label">Account Number</label>
+      <input id="account" type="text" class="input" placeholder="Account Number" required />
+
+      <label class="label">Amount</label>
+      <input id="amount" type="text" inputmode="decimal" class="input" placeholder="Amount" required />
+
+      <label class="label">PIN</label>
+      <input id="pin" type="password" class="input" placeholder="PIN" required />
+
+      <button type="submit" class="btn btn-neutral mt-4">Add Money</button>
+    </fieldset>
+  </form>
+</div>
+
+
+
+
+<!-- footer satrt -->
+
+ <footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10 min-h-[50vh]">
+  <aside>
+    <svg
+      width="50"
+      height="50"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      class="fill-current">
+      <path
+        d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
+    </svg>
+    <p>
+      ACME Industries Ltd.
+      <br />
+      Providing reliable tech since 1992
+    </p>
+  </aside>
+  <nav>
+    <h6 class="footer-title">Services</h6>
+    <a class="link link-hover">Branding</a>
+    <a class="link link-hover">Design</a>
+    <a class="link link-hover">Marketing</a>
+    <a class="link link-hover">Advertisement</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Company</h6>
+    <a class="link link-hover">About us</a>
+    <a class="link link-hover">Contact</a>
+    <a class="link link-hover">Jobs</a>
+    <a class="link link-hover">Press kit</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Legal</h6>
+    <a class="link link-hover">Terms of use</a>
+    <a class="link link-hover">Privacy policy</a>
+    <a class="link link-hover">Cookie policy</a>
+  </nav>
+</footer>
+
+</div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>
